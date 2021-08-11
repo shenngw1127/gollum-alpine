@@ -10,15 +10,15 @@ This is yet another Docker image for [gollum](https://github.com/gollum/gollum),
 Docker is pretty simple.
 
 ```bash
-$ docker run -i -t -p 8080:8080 -v wiki:/wiki cuotos/gollum-alpine
+$ docker run -i -t -p 8080:8080 -v wiki:/wiki wangsheng/gollum-alpine
 ```
 
-This will pull and run the `cuotos-alpine` image, exposing the website on port 8080, with persistent storage on a docker volume called `wiki`.
+This will pull and run the `wangsheng/gollum-alpine` image, exposing the website on port 8080, with persistent storage on a docker volume called `wiki`.
 
 Manual flags can be passed to the gollum binary using the environment variable `GOLLUMARGS=`
 
 ```bash
-$ docker run -i -t -p 8080:8080 -v wiki:/wiki -e GOLLUMARGS="--no-edit" cuotos/gollum-alpine
+$ docker run -i -t -p 8080:8080 -v wiki:/wiki -e GOLLUMARGS="--no-edit" wangsheng/gollum-alpine
 ```
 
 Which will run gollum in "read only" mode and not allowing editing of pages via the ui. handy if this is being deployed remotely
